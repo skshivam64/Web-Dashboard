@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %} Login {% endblock %}
+
+{% block style %}
+
+  <style>
+    .centered{
+      text-align: center;
+    }
+  </style>
+
+{% endblock %}
+
+{% block body %}
+
+  {{ super() }}
+  <div class = "centered" style = "width: 360px; height: 480px; box-shadow: 0 0 5px #41A3B3;">
+    <div class = "centered middle">
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <div class = "error centered"></div>
+    </div>
+  </div>
+
+{% endblock %}

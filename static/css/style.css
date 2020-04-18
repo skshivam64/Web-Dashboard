@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  .centered, .abcRioButtonLightBlue {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .abcRioButtonLightBlue{
+    height: 44px !important;
+    width: 150px !important;
+    padding: 5px;
+  }
+  .middle{
+    padding-top: 200px;
+  }
+  .error{
+    padding: 15px;
+    color: red;
+  }
+  .header{
+    color: #f6f7f0;
+  }
+  h1{
+    text-shadow: 0 0 5px #41A3B3;
+    padding: 15px;
+  }
+
+  img{
+    height: 36px;
+    width: 36px;
+    border-radius: 18px;
+    box-shadow: 0 0 2px #41A3B3;
+  }

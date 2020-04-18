@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %} Home {% endblock %}
+
+{% block script %}
+    <script src="{{ url_for('static', filename = 'js/load.js') }}" async defer></script>
+{% endblock %}
+
+{% block style %}
+
+  <style>
+      h1{
+          float: left;
+      }
+      .header{
+          min-height: 60px;
+      }
+      .user{
+          float: right;
+      }
+      .wrapper{
+          padding: 10px;
+          float: left;
+      }
+      .heading{
+        line-height: 36px;
+        font-size: 18px;
+        color: #41A3B3;
+      }
+      a{
+          text-decoration: none;
+          font-family: monospace;
+      }
+      .store, table{
+          margin: 0;
+          min-width: 100%;
+      }
+      table{
+          padding: 15px;
+      }
+      td, th{
+          text-align: center;
+          padding: 3px;
+      }
+      button{
+          border: none;
+          box-shadow: 0 0 3px #41A3B3;
+          padding: 5px;
+          width: 50%;
+      }
+
+  </style>
+
+{% endblock %}
+
+{% block body %}
+    <div>
+        <div class = "centered header">
+            <h1>Web Dashboard</h1>
+            <div class = "user">
+                <div class = "wrapper">
+                    <img src = "{{ session['profile']['Image'] }}"/> 
+                </div>
+                <div class = "wrapper heading">{{ session['profile']['Name'].split(" ")[0] }}</div>
+                <div class = "wrapper heading">
+                    <a href="#" onclick="signOut();">&nbsp;|->&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        <div class ="store centered">
+            <table>
+            </table>
+        </div>
+        <div>
+            <button class = "left" style = "float: left;">&lt;&lt;Prev</button>
+            <button class = "right" style = "float: right;">Next&gt;&gt;</button>
+        </div>
+        <div class="g-signin2" style = "display: none;"></div>
+    </div>
+{% endblock %}

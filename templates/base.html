@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+  <head>
+    <title>Web Dashboard - {% block title %}{% endblock %}</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="{{ url_for('static', filename = 'js/auth.js') }}" async defer></script>
+    {% block script %}{% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="252681857029-4arhf3ani1dq0nim456v23qieqscvoet.apps.googleusercontent.com">
+    <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/style.css') }}"/>
+    {% block style %}{% endblock %}
+  </head>
+  <body>
+    {% block body %}
+        <div class = "centered header">
+            <h1>Web Dashboard</h1>
+        </div>
+    {% endblock %}
+  </body>
+</html>
