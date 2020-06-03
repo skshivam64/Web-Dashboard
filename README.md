@@ -1,4 +1,5 @@
 <h1>Introduction</h1>
+<h2>Some changes</h2>
 
 This simple flask based project is a web application that allows you to login through your Google account to view a dashboard of information from an API source.
 
